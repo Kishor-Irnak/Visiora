@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shop Analytics Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script>
       tailwind.config = {
-        darkMode: 'class',
+        darkMode: "class",
         theme: {
           container: {
             center: true,
@@ -22,7 +25,7 @@
           },
           extend: {
             fontFamily: {
-              sans: ['Inter', 'sans-serif'],
+              sans: ["Inter", "sans-serif"],
             },
             colors: {
               border: "hsl(var(--border))",
@@ -75,40 +78,40 @@
             },
           },
         },
-      }
+      };
     </script>
     <style>
       :root {
         /* LIGHT THEME - Zinc-like */
-        --background: 0 0% 100%;       /* White */
-        --foreground: 240 10% 3.9%;    /* Zinc 950 */
-        
-        --card: 0 0% 100%;             /* White cards */
+        --background: 0 0% 100%; /* White */
+        --foreground: 240 10% 3.9%; /* Zinc 950 */
+
+        --card: 0 0% 100%; /* White cards */
         --card-foreground: 240 10% 3.9%;
-        
+
         --popover: 0 0% 100%;
         --popover-foreground: 240 10% 3.9%;
-        
-        --primary: 240 5.9% 10%;       /* Zinc 900 */
-        --primary-foreground: 0 0% 98%;/* White text */
-        
-        --secondary: 240 4.8% 95.9%;   /* Zinc 100 */
+
+        --primary: 240 5.9% 10%; /* Zinc 900 */
+        --primary-foreground: 0 0% 98%; /* White text */
+
+        --secondary: 240 4.8% 95.9%; /* Zinc 100 */
         --secondary-foreground: 240 5.9% 10%;
-        
+
         --muted: 240 4.8% 95.9%;
         --muted-foreground: 240 3.8% 46.1%; /* Zinc 500 */
-        
+
         --accent: 240 4.8% 95.9%;
         --accent-foreground: 240 5.9% 10%;
-        
+
         --destructive: 0 84.2% 60.2%;
         --destructive-foreground: 0 0% 98%;
-        
+
         /* Solid Borders - No Opacity */
-        --border: 240 5.9% 90%;        /* Zinc 200 */
+        --border: 240 5.9% 90%; /* Zinc 200 */
         --input: 240 5.9% 90%;
         --ring: 240 5.9% 10%;
-        
+
         --radius: 0.5rem;
 
         /* Sidebar Light */
@@ -119,56 +122,56 @@
         --sidebar-border: 220 13% 91%;
         --sidebar-ring: 217.2 91.2% 59.8%;
       }
-      
+
       .dark {
         /* DARK THEME - Deep Zinc (Acme/Attio style) */
-        --background: 240 10% 3.9%;    /* Zinc 950 - #09090b (Main BG) */
-        --foreground: 0 0% 98%;        /* White Text */
-        
+        --background: 240 10% 3.9%; /* Zinc 950 - #09090b (Main BG) */
+        --foreground: 0 0% 98%; /* White Text */
+
         /* Cards are slightly lighter than BG */
-        --card: 240 5.9% 10%;          /* Zinc 900 - #18181b */
+        --card: 240 5.9% 10%; /* Zinc 900 - #18181b */
         --card-foreground: 0 0% 98%;
-        
+
         --popover: 240 10% 3.9%;
         --popover-foreground: 0 0% 98%;
-        
-        --primary: 0 0% 98%;           /* White Primary Actions */
+
+        --primary: 0 0% 98%; /* White Primary Actions */
         --primary-foreground: 240 5.9% 10%;
-        
-        --secondary: 240 3.7% 15.9%;   /* Zinc 800 - #27272a */
+
+        --secondary: 240 3.7% 15.9%; /* Zinc 800 - #27272a */
         --secondary-foreground: 0 0% 98%;
-        
+
         --muted: 240 3.7% 15.9%;
         --muted-foreground: 240 5% 64.9%; /* Zinc 400 */
-        
+
         --accent: 240 3.7% 15.9%;
         --accent-foreground: 0 0% 98%;
-        
+
         --destructive: 0 62.8% 30.6%;
         --destructive-foreground: 0 0% 98%;
-        
+
         /* Solid Borders - Darker/Subtle */
-        --border: 240 3.7% 15.9%;      /* Zinc 800 - #27272a */
+        --border: 240 3.7% 15.9%; /* Zinc 800 - #27272a */
         --input: 240 3.7% 15.9%;
         --ring: 240 4.9% 83.9%;
-        
+
         /* Sidebar Dark - Matches Main BG usually or slightly distinct */
-        --sidebar: 240 10% 3.9%;       /* Zinc 950 */
+        --sidebar: 240 10% 3.9%; /* Zinc 950 */
         --sidebar-foreground: 240 4.8% 95.9%;
         --sidebar-accent: 240 3.7% 15.9%;
         --sidebar-accent-foreground: 240 4.8% 95.9%;
         --sidebar-border: 240 3.7% 15.9%;
         --sidebar-ring: 217.2 91.2% 59.8%;
       }
-      
+
       body {
-        font-family: 'Inter', sans-serif;
+        font-family: "Inter", sans-serif;
         background-color: hsl(var(--background));
         color: hsl(var(--foreground));
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
       }
-      
+
       /* Custom Scrollbar */
       ::-webkit-scrollbar {
         width: 8px;
@@ -186,21 +189,20 @@
       }
     </style>
 
-<link rel="stylesheet" href="/index.css">
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0",
-    "recharts": "https://esm.sh/recharts@^3.6.0"
-  }
-}
-</script>
-  <script type="module" crossorigin src="/Visiora/assets/index-D7bIfAxI.js"></script>
-</head>
+    <script type="importmap">
+      {
+        "imports": {
+          "react/": "https://esm.sh/react@^19.2.3/",
+          "react": "https://esm.sh/react@^19.2.3",
+          "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+          "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+          "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0",
+          "recharts": "https://esm.sh/recharts@^3.6.0"
+        }
+      }
+    </script>
+    <script type="module" crossorigin src="/Visiora/assets/index-D7bIfAxI.js"></script>
+  </head>
   <body>
     <div id="root"></div>
   </body>
