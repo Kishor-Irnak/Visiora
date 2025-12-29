@@ -168,17 +168,19 @@
       }
 
       html,
-      body {
+      body,
+      #root {
         font-family: "Inter", sans-serif;
         background-color: hsl(var(--background));
         color: hsl(var(--foreground));
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        overflow-x: hidden; /* Critical for mobile */
-        max-width: 100%;
+        overflow-x: hidden;
+        max-width: 100vw;
         width: 100%;
         margin: 0;
         padding: 0;
+        position: relative;
       }
 
       /* Custom Scrollbar */
@@ -210,9 +212,10 @@
         }
       }
     </script>
-    <script type="module" crossorigin src="/Visiora/assets/index-DsbZF47w.js"></script>
+    <script type="module" crossorigin src="/Visiora/assets/index-DtKITHYr.js"></script>
   </head>
   <body>
     <div id="root"></div>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.0.0/dist/flowbite.min.js"></script>
   </body>
 </html>
