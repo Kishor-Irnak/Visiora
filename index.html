@@ -167,12 +167,18 @@
         --sidebar-ring: 217.2, 91.2%, 59.8%;
       }
 
+      html,
       body {
         font-family: "Inter", sans-serif;
         background-color: hsl(var(--background));
         color: hsl(var(--foreground));
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden; /* Critical for mobile */
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
       }
 
       /* Custom Scrollbar */
@@ -204,7 +210,7 @@
         }
       }
     </script>
-    <script type="module" crossorigin src="/Visiora/assets/index-D7bIfAxI.js"></script>
+    <script type="module" crossorigin src="/Visiora/assets/index-DsbZF47w.js"></script>
   </head>
   <body>
     <div id="root"></div>
