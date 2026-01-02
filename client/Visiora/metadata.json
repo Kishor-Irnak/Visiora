@@ -1,0 +1,5 @@
+{
+  "name": "Shop Analytics Dashboard",
+  "description": "A high-performance, minimal ecommerce analytics dashboard inspired by Attio. Features comprehensive insights into orders, products, customers, and inventory with a modern, responsive UI.",
+  "requestFramePermissions": []
+}
